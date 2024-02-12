@@ -13,41 +13,80 @@
 
 <body>
   <header>
-    <div class="flex-container">
-      <a href="#">
+    <div id="wrapper">
+      <a href="https://www.tva.com" target="_blank">
         <img src="images/timeva.jpg" alt="logo" id="logo"></img></a>
     </div>
     <nav>
-      <ul>
-        <li>
-          <a href="https://www.tva.com/energy">Energy</a>
-        </li>
-        <li>
-          <a href="https://www.tva.com/environment">Environment</a>
-        </li>
-        <li>
-          <a href="https://www.tva.com/economic-development">Sacred Timeline</a>
-        </li>
-        <li>
-          <a href="https://en.wikipedia.org/wiki/Time_Variance_Authority">About
-            TVA</a>
-        </li>
-        <li>
-          <a href="https://www.tva.com/newsroom">Variant News</a>
-        </li>
-        <li>
-          <a href="https://www.tva.com/careers">Careers</a>
-        </li>
-        <li>
-          <a href="https://www.tva.com/investors">Time Keepers</a>
-        </li>
-        <li>
-          <form>
-            <input placeholder="SEARCH">
-            <button type="submit">&#x1F50D;</button>
-          </form>
-        </li>
-      </ul>
+      <div id="navbar">
+        <ul>
+          <li>
+            <a href="#">Energy</a>
+          </li>
+          <li>
+            <a href="#">Environment</a>
+          </li>
+          <li>
+            <a href="#">Sacred Timeline</a>
+          </li>
+          <li>
+            <a href="https://en.wikipedia.org/wiki/Time_Variance_Authority" target="_blank">About
+              TVA</a>
+          </li>
+          <li>
+            <a href="#">Variant News</a>
+          </li>
+          <li>
+            <a href="#">Careers</a>
+          </li>
+          <li>
+            <a href="#">Time Keepers</a>
+          </li>
+          <li>
+            <form>
+              <input placeholder="SEARCH">
+              <button type="submit">&#x1F50D;</button>
+            </form>
+          </li>
+        </ul>
+      </div>
+      <!--Mobile Navbar-->
+      <div id="mobile-nav">
+        <input type="checkbox">
+        <span></span>
+        <span></span>
+        <span></span>
+        <ul id="menu">
+          <li>
+            <a href="https://www.tva.com/energy" target="_blank">Energy</a>
+          </li>
+          <li>
+            <a href="https://www.tva.com/environment" target="_blank">Environment</a>
+          </li>
+          <li>
+            <a href="https://www.tva.com/economic-development" target="_blank">Sacred Timeline</a>
+          </li>
+          <li>
+            <a href="https://en.wikipedia.org/wiki/Time_Variance_Authority" target="_blank">About
+              TVA</a>
+          </li>
+          <li>
+            <a href="https://www.tva.com/newsroom" target="_blank">Variant News</a>
+          </li>
+          <li>
+            <a href="https://www.tva.com/careers" target="_blank">Careers</a>
+          </li>
+          <li>
+            <a href="https://www.tva.com/investors" target="_blank">Time Keepers</a>
+          </li>
+          <li>
+            <form>
+              <input placeholder="SEARCH">
+              <button type="submit">&#x1F50D;</button>
+            </form>
+          </li>
+        </ul>
+      </div>
     </nav>
   </header>
   <!--Carousel-->
@@ -66,87 +105,65 @@
     </div>
 
   </div>
+  <!--Script that makes the carousel run-->
   <script>
     let slideIndex = 0;
     showSlides();
 
     function showSlides() {
-      let i;
+      let slideItem;
       let slides = document.getElementsByClassName("carousel-item");
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+      for (slideItem = 0; slideItem < slides.length; slideItem++) {
+        slides[slideItem].style.display = "none";
       }
       slideIndex++;
       if (slideIndex > slides.length) { slideIndex = 1 }
       slides[slideIndex - 1].style.display = "block";
-      setTimeout(showSlides, 2000); // Change image every 2 seconds
+      setTimeout(showSlides, 5000); // Change image every 5 seconds
     }
   </script>
 
 
   <!--Main content-->
-  <div class="flex-container">
-    <div>
-      <div class="content-images">
-        <img src="Images/lakes.jpg" alt="lakes">
-      </div>
-      <div class="content-images">
-        <img src="Images/jobs.jpg" alt="jobs">
-      </div>
-      <div class="content-images">
-        <img src="Images/get.jpg" alt="get">
-      </div>
+  <section>
+    <div id="intro">
+      <h1>Time Valley Authority</h1>
+      <p>The Time Variance Authority (TVA) is a fictional organization in the Marvel Comics Universe.
+        <br>The Tennessee Valley Authority (TVA) provides electricity for 153 local power companies.
+        <br>The Time Valley Authority is a time line blend of these two companies creating one fictional
+        <br>power house that provides power to the multiverse while also working to keep the timeline stable.
+      </p>
     </div>
+  </section>
+
+
+  <div class="content-images">
+    <img src="images/eneg - Copy.jpg" alt="eng" id="engBlock">
+  </div>
   </div>
 
 
-  <div class="flex-container">
-    <div class="content-images">
-      <img src="images/dock.jpg" alt="dock" id="dockBlock">
-    </div>
+  <div class="content-images">
+    <img src="images/solar.jpg" alt="solar" id="solarBlock">
+  </div>
   </div>
 
 
-  <div class="flex-container">
-    <div class="content-images">
-      <img src="images/eneg - Copy.jpg" alt="eng" id="engBlock">
-    </div>
+  <div class="content-images">
+    <img src="images/support.jpg" alt="support" id="supBlock">
+  </div>
   </div>
 
-  <div class="flex-container">
-    <div class="content-images">
-      <img src="images/solar.jpg" alt="solar" id="solarBlock">
-    </div>
+
+  <div class="content-images">
+    <img src="images/keepers.jpg" alt="keepers" id="comBlock">
+  </div>
   </div>
 
-  <div class="flex-container">
-    <div class="content-images">
-      <img src="images/support.jpg" alt="support" id="supBlock">
-    </div>
-  </div>
 
-  <div class="flex-container">
-    <div class="content-images">
-      <img src="images/agoth.jpg" alt="agoth" id="agothBlock">
-    </div>
+  <div class="content-images">
+    <img src="images/loki.jpg" alt="loki" id="lokiBlock">
   </div>
-
-  <div class="flex-container">
-    <div class="content-images">
-      <img src="images/keepers.jpg" alt="keepers" id="comBlock">
-    </div>
-  </div>
-
-  <div class="flex-container">
-    <div class="content-images">
-      <img src="images/loki.jpg" alt="loki" id="lokiBlock">
-    </div>
-  </div>
-
-  <div class="flex-container">
-    <div id="timeLine">
-      <img src="images/timeline.jpg" alt="timeline">
-    </div>
   </div>
 
   <div class="lastArea">
