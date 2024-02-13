@@ -19,7 +19,7 @@ body {
 }
 
 #intro {
-    display: flex;
+    
     flex-wrap: wrap;
     min-width: 300px;
     color: hsl(50, 97%, 44%);
